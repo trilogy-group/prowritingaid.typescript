@@ -8,14 +8,9 @@ tasks:
       npm --version
       npm install npm -g
       npm --version
-      aws configure set aws_access_key_id $ENG_TEMP_AWS_ACCESS_KEY_ID
-      aws configure set aws_secret_access_key $ENG_TEMP_AWS_SECRET_ACCESS_KEY
-      aws configure set region $ENG_TEMP_AWS_DEFAULT_REGION
-      export AWS_REGION=$ENG_TEMP_AWS_DEFAULT_REGION
       npm config set @trilogy-group:registry https://npm.pkg.github.com/
       npm config set //npm.pkg.github.com/:_authToken '${GITHUB_TOKEN}'
-      npm install -g @aws-amplify/cli
-      npm run ci-all
+      npm install pro_writing_aid_ts --save
       npm run build
 vscode:
   extensions:
